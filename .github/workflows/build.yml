@@ -4,6 +4,7 @@ on:
   pull_request:
     branches:
       - '*'
+  workflow_dispatch:  # This should be on the same level as pull_request
 
 jobs:
   build:
