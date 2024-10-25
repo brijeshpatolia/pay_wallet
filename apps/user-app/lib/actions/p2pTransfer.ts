@@ -16,7 +16,7 @@ export async function p2pTransfer(to: string, amount: number) {
     if (!from) {
         return {
             message: "Error: User not authenticated"
-        };
+        }; 
     }
 
     const toUser = await prisma.user.findFirst({
@@ -60,8 +60,8 @@ export async function p2pTransfer(to: string, amount: number) {
             });
 
             // Record the transfer in p2pTransfer table
-            await tx.p2pTransfer.create({
-                data: {
+             await tx.p2pTransfer.create({
+               data: {
                     fromUserId: Number(from),
                     toUserId: Number(toUser.id),
                     amount,
