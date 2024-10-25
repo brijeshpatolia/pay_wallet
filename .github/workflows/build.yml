@@ -3,7 +3,8 @@ name: Build on PR
 on:
   pull_request:
     branches:
-      - main
+      - '*'
+  workflow_dispatch:  # This should be on the same level as pull_request
 
 jobs:
   build:
@@ -14,15 +15,9 @@ jobs:
         uses: actions/setup-node@v3
         with:
           node-version: '20'
-      
       - name: Install Dependencies
         run: npm install
-
       - name: Generate Prisma Client
         run: npm run db:generate
-        
       - name: Run Build
         run: npm run build
-
-
-
