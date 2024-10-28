@@ -24,7 +24,7 @@ jobs:
         context: .
         file: ./docker/Dockerfile.user
         push: true
-        tags: brijeshpatolia/pay_wallet:latest # Replace with your Docker Hub username and repository
+        tags: brijeshpatolia/pay_wallet:latest 
 
     - name: Verify Pushed Image
-      run: docker pull brijeshpatolia/pay_wallet:latest # Replace with your Docker Hub username and repository
+      run: docker pull brijeshpatolia/pay_wallet:latest 
