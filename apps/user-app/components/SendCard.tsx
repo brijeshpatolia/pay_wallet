@@ -7,6 +7,19 @@ import { useState } from "react";
 import { p2pTransfer } from "../lib/actions/p2pTransfer";
 
 export function SendCard() {
+
+
+
+
+
+
+
+
+
+
+
+
+    
     const [number, setNumber] = useState("");
     const [amount, setAmount] = useState("");
     const [loading, setLoading] = useState(false);  // For loading state
